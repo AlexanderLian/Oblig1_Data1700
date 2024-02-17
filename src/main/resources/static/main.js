@@ -78,10 +78,10 @@ function lagTable(table, bilett) {
 function slettBilett() {
     let table = document.querySelector("#print");
 
-    var rows = table.getElementsByTagName("tr");
-    for (var i = 0; i < rows.length; i++) {
-        var cells = rows[i].getElementsByTagName("td");
-        for (var j = cells.length - 1; j >= 0; j--) {
+    let rows = table.getElementsByTagName("tr");
+    for (let i = 0; i < rows.length; i++) {
+        let cells = rows[i].getElementsByTagName("td");
+        for (let j = cells.length - 1; j >= 0; j--) {
             cells[j].parentNode.removeChild(cells[j]);
         }
     }
