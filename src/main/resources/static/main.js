@@ -11,7 +11,6 @@ function kjopBillet() {
     if (film === "-1") {
         document.querySelector("#filmError").innerHTML = "Må velge film";
         validInput = false;
-        console.log("mjau");
     } else {
         document.querySelector("#filmError").innerHTML = "";
     }
@@ -56,8 +55,6 @@ function kjopBillet() {
     } else {
         document.querySelector("#epostError").innerHTML = "";
     }
-    console.log(validInput);
-    console.log(film);
     if (validInput === true) {
         let bilett = {film, antall, fornavn, etternavn, telefonnr, epost};
         let table = document.querySelector("#print");
