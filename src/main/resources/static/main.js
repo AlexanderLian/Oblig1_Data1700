@@ -73,12 +73,6 @@ function kjopBillet() {
 
 function lagTable(table, array) {
 
-   /* row.insertCell(0).innerHTML = bilett.film;
-    row.insertCell(1).innerHTML = bilett.antall;
-    row.insertCell(2).innerHTML = bilett.fornavn;
-    row.insertCell(3).innerHTML = bilett.etternavn;
-    row.insertCell(4).innerHTML = bilett.telefonnr;
-    row.insertCell(5).innerHTML = bilett.epost;*/
     for (let i = 0; i < array.length; i++) {
         let row = table.insertRow();
         row.insertCell(0).innerHTML = array[i].film;
