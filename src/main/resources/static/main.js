@@ -60,7 +60,7 @@ function kjopBillet() {
         let bilett = {film, antall, fornavn, etternavn, telefonnr, epost};
         ticketArray.push(bilett);
         let table = document.querySelector("#print");
-        lagTable(table, bilett);
+        lagTable(table, ticketArray);
 
         document.querySelector("#film").value = "-1";
         document.querySelector("#numAnt").value = "";
@@ -71,15 +71,23 @@ function kjopBillet() {
     }
 }
 
-function lagTable(table, bilett) {
-    let row = table.insertRow();
-    row.insertCell(0).innerHTML = bilett.film;
+function lagTable(table, array) {
+
+   /* row.insertCell(0).innerHTML = bilett.film;
     row.insertCell(1).innerHTML = bilett.antall;
     row.insertCell(2).innerHTML = bilett.fornavn;
     row.insertCell(3).innerHTML = bilett.etternavn;
     row.insertCell(4).innerHTML = bilett.telefonnr;
-    row.insertCell(5).innerHTML = bilett.epost;
-
+    row.insertCell(5).innerHTML = bilett.epost;*/
+    for (let i = 0; i < array.length; i++) {
+        let row = table.insertRow();
+        row.insertCell(0).innerHTML = array[i].film;
+        row.insertCell(1).innerHTML = array[i].antall;
+        row.insertCell(2).innerHTML = array[i].fornavn;
+        row.insertCell(3).innerHTML = array[i].etternavn;
+        row.insertCell(4).innerHTML = array[i].telefonnr;
+        row.insertCell(5).innerHTML = array[i].epost;
+    }
 }
 
 function slettBilett() {
