@@ -1,3 +1,4 @@
+ticketArray = [];
 function kjopBillet() {
 
     let film = document.querySelector("#film").value;
@@ -57,8 +58,16 @@ function kjopBillet() {
     }
     if (validInput === true) {
         let bilett = {film, antall, fornavn, etternavn, telefonnr, epost};
+        ticketArray.push(bilett);
         let table = document.querySelector("#print");
         lagTable(table, bilett);
+
+        document.querySelector("#film").value = "-1";
+        document.querySelector("#numAnt").value = "";
+        document.querySelector("#txtFornavn").value = "";
+        document.querySelector("#txtEtternavn").value = "";
+        document.querySelector("#numTlf").value = "";
+        document.querySelector("#txtEpost").value = "";
     }
 }
 
@@ -70,9 +79,11 @@ function lagTable(table, bilett) {
     row.insertCell(3).innerHTML = bilett.etternavn;
     row.insertCell(4).innerHTML = bilett.telefonnr;
     row.insertCell(5).innerHTML = bilett.epost;
+
 }
 
 function slettBilett() {
+    ticketArray = [];
     let table = document.querySelector("#print");
 
     let rows = table.getElementsByTagName("tr");
