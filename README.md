@@ -11,6 +11,7 @@ Fullt navn: Alexander Lian
 Kort beskkrivelse av applikasjon (5-10 setninger):
 
 Jeg har laget en javascript applikasjon for å bestille kinobiletter.
-Jeg har brukt inputvalidasjon for å hjelpe brukeren med å legge inn riktig informasjon. 
-Dette gjør også applikasjonen mer brukervennlig. Og sørger for at brukeren ikke glemmer noe.
+Hvor jeg har brukt inputvalidasjon for å hjelpe brukeren med å legge inn riktig informasjon. 
+Dette gjør også applikasjonen mer brukervennlig. 
+Og sørger for at brukeren ikke glemmer noe.
 Dette vil også sørge for at hvis applikasjonen blir koblet opp mot en server, slipper man og sende feil informasjon til serveren.
